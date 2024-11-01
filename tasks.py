@@ -37,7 +37,6 @@ def task6(df):
     print("TASK 6")
     print(df.groupby(['Country'])['Profit'].sum())
 
-#НЕ ОТОБРАЖАЕТСЯ ГРАФИК
 @check(cols=['Country', 'Sales'])
 def task7(df):
     print("TASK 7")
@@ -78,13 +77,11 @@ def task14(df):
     print("TASK 14")
     print(df.groupby('City')['Category'].unique().apply(len))
 
-#ВЫВЕСТИ ТОП 5 ЗАПИСЕЙ ПО МАРЖЕ
 @check(cols=['UnitPrice', 'UnitCost'])
 def task15(df):
     print("TASK 15")
     print(df.assign(Margin = df['UnitPrice'] - df['UnitCost']).sort_values('Margin', ascending=False).head(5))
 
-#СДЕЛАТЬ ОТОБРАЖЕНИЕ ГРАФИКА И ПЕРЕДЕЛАТЬ НАХУЙ
 @check(cols=['Profit', 'Quantity'])
 def task16(df):
     print("TASK 16")
@@ -101,7 +98,6 @@ def task17(df):
     print("TASK 17")
     print(pd.DataFrame({'Mean': df.groupby(['Customer'])['UnitPrice (Products)'].mean(), 'Median': df.groupby(['Customer'])['UnitPrice (Products)'].median()}))
 
-#СДЕЛАТЬ ОТОБРАЖЕНИЕ ГРАФИКА
 @check(cols=['OrderDate', 'Sales'])
 def task18(df):
     print("TASK 18")
